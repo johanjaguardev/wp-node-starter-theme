@@ -1,34 +1,53 @@
-=== BlankSlate ===
+Starter Pack to create a Custom theme for Wordpress
 
-Contributors: tidythemes, bhadaway
-Donate link: https://calmestghost.com/donate
-Theme link: https://github.com/tidythemes/blankslate
-Tags: accessibility-ready, one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
-Requires at least: 5.0
-Tested up to: 5.8
-Stable tag: trunk
-License: GNU General Public License v3 or Later
-License URI: https://www.gnu.org/licenses/gpl.html
+Tools:
+PHP - Language
+Wordpress - Core
+JS - For web purposes
+nodeJS - to use node in order to implement some task in dev
+BlankSlate - Like starter theme - almost plain theme - Source: http://wordpress.org/themes/blankslate
+SASS - for css purposes
+BEM
 
-Please read: tidythemes.com/concept.
+Structure files has been taken from https://www.sitepoint.com/fast-gulp-wordpress-theme-development-workflow/
 
-== Description ==
+Structure files
+|-template – the WordPress PHP theme files
+|-images – images used by your theme
+|-scss – Sass SCSS source files
+|-js/client – to wordpress and hmtl purposes * custom
+|-js/node – to dev task * custom
 
-IMPORTANT — PLEASE READ: tidythemes.com/concept
+scss screen sizes - source: https://www.designrush.com/trends/website-dimensions
 
-YOU MAY DELETE THIS FILE AND ANY OTHER FILE(S) BEFORE STARTING YOUR PROJECT
+DESKTOP
+=================
+1366x768 (22.98%)
+1920x1080 (20.7%)
+1536x864 (7.92%)
+1440x900 (7.23%)
+1280x720 (4.46%)
 
-BlankSlate is the definitive WordPress boilerplate starter theme. We've carefully constructed the most clean and minimalist theme possible for designers and developers to use as a base to build websites for clients or to build completely custom themes from scratch. Clean, simple, unstyled, semi-minified, unformatted, and valid code, SEO-friendly, jQuery-enabled, no programmer comments, standardized and as white label as possible, and most importantly, the CSS is reset for cross-browser-compatability and no intrusive visual CSS styles have been added whatsoever. A perfect skeleton theme. For support and suggestions, go to: https://github.com/tidythemes/blankslate/issues. Thank you.
+MOBILE
+=================
+360x640 (18.7%)
+375x667 (7.34%)
+414x896 (6.76%)
+360x780 (5.31%)
+375x812 (5.01%)
 
-If you're creating your own theme or client project, open up all files and do a "Find and Replace All in All Files" on the word "blankslate" with your own slug and prefix.
+TABLET
+=================
+768x1024 (51.43%)
+1280x800 (7.28%)
+800x1280 (5.26%)
+601x962 (4.32%)
+962x601 (2.99%)
 
-=== License ===
+CHANGELOG
+starter theme - Source: http://wordpress.org/themes/blankslate
+package.json init
+structure files - Source: https://www.sitepoint.com/fast-gulp-wordpress-theme-development-workflow/
+watch sass from node - Source: https://medium.com/@ahewitt_89859/using-node-sass-to-watch-sass-files-cef9b5149aca
+change of plans, implement gulp: https://www.sitepoint.com/fast-gulp-wordpress-theme-development-workflow/
 
-In its unchanged and original state:
-
-BlankSlate WordPress Theme © 2011-2021 TidyThemes
-BlankSlate is distributed under the terms of the GNU GPL
-
-The BlankSlate theme package and all files contained within are distributed under the terms of the GNU GPL v3 or Later (https://www.gnu.org/licenses/gpl.html).
-
-Once you've significantly changed the theme to build your own unique project, either for yourself or for a client under a different theme name (as is encouraged), you're entirely welcome to copyright and license that project as you see fit.

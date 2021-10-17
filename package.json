@@ -1,0 +1,52 @@
+{
+  "name": "wp-plus-node-starter-theme",
+  "version": "1.0.0",
+  "description": "WP + Node Starter Theme Pack",
+  "main": "js/node/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass --watch ./scss/style.scss -o ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johanjaguardev/wp-node-starter-theme.git"
+  },
+  "keywords": [
+    "wordpress",
+    "css",
+    "grid",
+    "css",
+    "flexbox",
+    "php",
+    "js",
+    "node"
+  ],
+  "author": "Johan Vargas Sánchez",
+  "email": "johanvargasdev@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johanjaguardev/wp-node-starter-theme/issues"
+  },
+  "homepage": "https://github.com/johanjaguardev/wp-node-starter-theme#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.3.7",
+    "browser-sync": "^2.27.5",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^5.0.8",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-deporder": "^1.2.0",
+    "gulp-imagemin": "^7.0.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.0.0",
+    "gulp-strip-debug": "^4.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-util": "^3.0.8",
+    "imagemin-mozjpeg": "^9.0.0",
+    "postcss": "^8.1.0",
+    "postcss-assets": "^6.0.0",
+    "sass": "^1.43.2"
+  },
+  "dependencies": {}
+}

@@ -102,3 +102,12 @@ dist
 
 # TernJS port file
 .tern-port
+
+# dist template
+dist/
+.DS_Store
+images/
+images-original/
+
+.ai 
+.psd 
