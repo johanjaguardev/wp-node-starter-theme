@@ -10,7 +10,7 @@ const
   // JavaScript settings
   js = {
     src         : dir.src + 'js/**/*',
-    watch       : dir.src + 'js/*.js',
+    watch       : dir.src + 'js/**/*.js',
     build       : dir.build,
     serve       : dir.src,
     filename    : 'scripts.js'
@@ -19,11 +19,11 @@ const
     src         : dir.src + 'images-original/**/*',
     serve       : dir.src + 'images/',
     build       : dir.build + 'images/',
-    watch       : dir.src + 'images-original/*'
+    watch       : dir.src + 'images-original/**/*'
   },
   css = {
     src         : dir.src + 'scss/style.scss',
-    watch       : dir.src + 'scss/*.scss',
+    watch       : dir.src + 'scss/**/*.scss',
     serve       : dir.src,
     build       : dir.build,
     sassOpts: {
@@ -68,7 +68,7 @@ const
   stripdebug    = require('gulp-strip-debug'),
   uglify        = require('gulp-uglify');
 
-let browserSync = false;
+const browserSync = require('browser-sync').create();
 
 // image processing
 gulp.task('images', () => {
@@ -127,16 +127,29 @@ gulp.task('build-images',() => {
     .pipe(gulp.dest(images.build));
 });
 
-// watch for file changes
+//watch css without reload
+gulp.task('watch', () => {
+  gulp.watch(css.watch, gulp.series('css'), () => {
+    console.log('Changes detected in CSS Theme');
+  });
+  gulp.watch(images.watch, gulp.series('images'), () => {
+    console.log('Changes detected in Images Theme');
+  });
+  gulp.watch(js.watch, gulp.series('js'), () => {
+    console.log('Changes detected in JS Theme');
+  });
+  gulp.watch(dir.src + '**/*.php').on("change", () => {
+    console.log('Changes detected in pHp  Theme');
+  });
+});
+
+// serve for file changes
 gulp.task('serve', () => {
-  if (browserSync === false) {
-    browserSync = require('browser-sync').create();
-    browserSync.init(syncOpts);
-  }
-  gulp.watch(css.watch, gulp.series('css'), browserSync.reload);
-  gulp.watch(images.watch, gulp.series('images'), browserSync.reload);
-  gulp.watch(js.watch, gulp.series('js'), browserSync.reload);
-  //gulp.watch(dir.src + '**/*').on("change", browserSync.reload);
+  browserSync.init(syncOpts);
+    gulp.watch(css.watch, gulp.series('css'));
+    gulp.watch(images.watch, gulp.series('images'));
+    gulp.watch(js.watch, gulp.series('js'));
+    gulp.watch(dir.src + '**/*.php').on("change", browserSync.reload);
 });
 
 // run all tasks - build

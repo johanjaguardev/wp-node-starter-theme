@@ -45,9 +45,16 @@ TABLET
 962x601 (2.99%)
 
 CHANGELOG
-starter theme - Source: http://wordpress.org/themes/blankslate
-package.json init
-structure files - Source: https://www.sitepoint.com/fast-gulp-wordpress-theme-development-workflow/
-watch sass from node - Source: https://medium.com/@ahewitt_89859/using-node-sass-to-watch-sass-files-cef9b5149aca
-change of plans, implement gulp: https://www.sitepoint.com/fast-gulp-wordpress-theme-development-workflow/
+**********************
+- starter theme - Source: http://wordpress.org/themes/blankslate
+- package.json init
+- structure files - Source: https://www.sitepoint.com/fast-gulp-wordpress-theme-development-workflow/
+- watch sass from node - Source: https://medium.com/@ahewitt_89859/using-node-sass-to-watch-sass-files-cef9b5149aca
+- change of plans, implement gulp: https://www.sitepoint.com/fast-gulp-wordpress-theme-development-workflow/
+- initial css styles (*current)
 
+
+FUTURE TASK
+**********************
+- ADD LINTERS
+- IMPROVE README
