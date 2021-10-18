@@ -20,7 +20,11 @@ section {
   display: flex;
   flex-direction: row;
 
-  figure {
+  figure {    
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: em(12px);
     width: em($space-width * 5);
   }
@@ -81,6 +85,7 @@ p {
   font-size: em(20px);
   line-height: 1.5;
   margin: 0 0 em(20px) 0;
+  font-weight: 200;
 }
 
 /* All images must not be larger than parent container */
@@ -94,20 +99,19 @@ li {
   list-style-type: none;
 }
 
-
 .container {
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-  max-width: $screen-size-desktop-xl;
+  max-width: $screen-size-desktop-l;
   overflow: visible;
 
   @media screen and (max-width: $screen-size-desktop-xl) {
-    max-width: $screen-size-desktop-l;
+    max-width: $screen-size-desktop-s;
   }
 
   @media screen and (max-width: $screen-size-desktop-l) {
-    max-width: 100%;
+    max-width: $screen-size-tablet;
   } 
 }
 

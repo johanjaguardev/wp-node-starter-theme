@@ -11,19 +11,19 @@
   $title = get_the_title($post);
 
   if( $imageBg ):?>
-  <section class="container <?php echo $slug?> section-<?php echo $imagePosition?>" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')">
+  <section class="container <?php echo $slug?> <?php echo $imagePosition?>" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')">
   <?php else:?>
-  <section class="container section-<?php echo $slug?> section-<?php echo $imagePosition?>">
+  <section class="container <?php echo $slug?> section-<?php echo $imagePosition?>">
   <?php endif;?>
-
+    <a name="<?php echo $slug?>"></a>
     <!-- If the image is not a bg, use it inside a figure -->
     <?php if( ! $imageBg ):?>
-    <figure class="section-<?php echo $slug?>__figure ">
+    <figure class="<?php echo $slug?>__figure">
       <img src="<?php echo $image?>"/>
     </figure>
-    <article>
+    <article class="<?php echo $slug?>__article">
       <h2><?php echo $title?></h2>
-      <div class="section__content">
+      <div class="section__content <?php echo $slug?>__content">
         <?php echo $content?>
       </div>
 

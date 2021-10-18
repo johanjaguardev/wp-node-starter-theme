@@ -1,16 +1,13 @@
 $font-heading: 'Nunito Sans', sans-serif;
 $font-text: 'Nunito Sans', sans-serif;
 
-// colors
-
-
 // screen sizes
 $screen-size-desktop-xl: 1536px;
 $screen-size-desktop-l: 1280px;
+$screen-size-desktop-s: 962px;
 $screen-size-tablet: 768px;
 $screen-size-phone: 414px;
 $space-width: 128px;
-
 
 $font-size-general: 16px;
 @function em($pixels) {
