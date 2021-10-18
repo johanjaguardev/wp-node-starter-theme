@@ -10,7 +10,59 @@
 
   h2 {
     color: $text-white;
-    margin-bottom: em(20px);
+    margin-bottom: em(30px);
     text-align: center;
+  }
+  &__figure {
+    padding-right: em(60px);
+  }
+  &__article {
+    background-color: $text-black;
+    border-radius: em(32px);
+    display: flex;
+    flex-direction: row;
+    margin-bottom: em(30px);
+    padding: em(26px);
+    &-ico {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      width: rem($space-width * 4);
+
+      img {
+        height: em($space-width * 1);
+      }
+    }
+    .servicios__info {
+      padding-left: em(30px);
+
+      h4 {
+        color: $text-white;
+        font-size: em(24px);
+        font-weight: 800;
+        margin-bottom: em(12px);
+      }
+      .servicios__article-text {
+        color: $text-white;
+        font-size: em(20px);
+        line-height: 1.2;
+
+        p {
+          font-weight: 200;
+        }
+      }
+    }
+    &:nth-child(even) {
+      background-color: $text-white;
+      .servicios__info {
+        h4 {
+          color: $text-black;
+        }
+        .servicios__article-text {
+          color: $text-black;
+        }
+      }
+    }
   }
 }

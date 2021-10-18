@@ -27,7 +27,7 @@
     $articles.= "  </div>";
     $articles.= "  <div class='servicios__info'>";
     $articles.= "    <h4>".get_the_title($entry['ID'])."</h4>";
-    $articles.= "    <p>".get_post_field('post_content', $entry['ID'])."</p>";
+    $articles.= "    <div class='servicios__article-text'>".get_post_field('post_content', $entry['ID'])."</div>";
     $articles.= "  </div>";
     $articles.= "</article>";
     $conteo++;
