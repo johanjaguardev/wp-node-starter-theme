@@ -123,6 +123,10 @@ h2 {
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
+
+  @media screen and (max-width: $screen-size-tablet) {
+    font-size: em(36px);
+  } 
 }
 
 p {
