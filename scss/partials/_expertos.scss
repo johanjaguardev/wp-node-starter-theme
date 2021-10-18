@@ -25,4 +25,9 @@
     margin: 0.5em 0 1.5em 0;
     text-align: center;
   }
+
+  @media screen and (max-width: $screen-size-tablet) {
+    background-color: $text-black;
+    border-radius: 0;
+  } 
 }

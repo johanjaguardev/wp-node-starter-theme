@@ -31,6 +31,9 @@ body {
   @media screen and (max-width: $screen-size-desktop-l) {
     max-width: $screen-size-tablet;
   } 
+  @media screen and (max-width: $screen-size-tablet) {
+    max-width: 100%;
+  } 
 }
 
 .flex {
@@ -149,7 +152,7 @@ li {
   text-align: center;
   padding: em(6px) em(20px);
   text-transform: uppercase;
-  
+
   @media screen and (max-width: $screen-size-tablet) {
     font-size: em(24px);
     padding: em(4px) em(10px);
