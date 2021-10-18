@@ -1,0 +1,45 @@
+.header {
+  background-position: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  height: em(600px);
+  justify-content: center;
+
+  &__top {
+    
+    .container {
+      justify-content: space-between; 
+    }
+  }
+
+  &__logo {
+    width: $space-width * 2;
+  }
+
+  &__nav {
+    width: $space-width * 8;
+  }
+
+  &__hero {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5em 0;
+
+    p {
+      color: $text-white;
+      font-size: em(56px);
+      line-height: 1.2;
+  
+      strong {
+        font-weight: 700;
+      }
+    }
+
+    .btn {
+      margin-top: em(30px);
+    }
+  } 
+}

@@ -9,5 +9,13 @@ $screen-size-desktop-xl: 1536px;
 $screen-size-desktop-l: 1280px;
 $screen-size-tablet: 768px;
 $screen-size-phone: 360px;
+$space-width: 128px;
+
 
 $font-size-general: 16px;
+@function em($pixels) {
+  @return ($pixels / $font-size-general) * 1em;
+}
+
+$text-white: #fff;
+$text-black: #171b3f;

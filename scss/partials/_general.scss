@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 
 /* Override default style and set padding and margin to nothing */
 
@@ -23,23 +23,23 @@ a {
 }
 
 h1 {
-  font-size: em(30);
+  font-size: em(30px);
   font-weight: 600;
   line-height: 1.2;
-  margin: em(10) 0;
+  margin: em(10px) 0;
 }
 
 
 h2 {
-  font-size: em(25);
+  font-size: em(25px);
   font-weight: 300;
-  margin: em(10) 0;
+  margin: em(10px) 0;
   line-height: 1.2;
 }
 
 p {
-  font-size: em(1);
-  margin: 1em(10) 0;
+  font-size: em(1px);
+  margin: 1 em(10px) 0;
 }
 
 /* All images must not be larger than parent container */
@@ -69,6 +69,15 @@ li {
 
 .column {
   flex-direction: column;
+}
+
+.btn {
+  background: white;
+  border-radius: em(12px);
+  color: $text-black;
+  font-size: em(32px);
+  font-weight: 700;
+  padding: em(6px) em(20px);
 }
 
 // font-family: 

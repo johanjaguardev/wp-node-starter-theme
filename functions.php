@@ -143,3 +143,5 @@ return count( $comments_by_type['comment'] );
 return $count;
 }
 }
+
+add_theme_support( 'custom-logo' );
