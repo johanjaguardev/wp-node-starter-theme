@@ -87,7 +87,6 @@
       }
     }
     &__article-text {
-      color: $text-white;
       font-size: em(16px);
       line-height: 1.2;
     }
@@ -99,6 +98,27 @@
       img {
         height: em($space-width * 0.9);
       }
+    }
+  }
+
+  @media screen and (max-width: $screen-size-desktop-l) {
+    .container {
+      flex-direction: column;
+    }
+    &__figure, &__articles {
+      width: 100%;
+    }
+
+    &__info {
+      padding-left: em(16px);
+
+      h4 {
+        font-size: em(24px);
+        margin-bottom: em(16px);
+      }
+    }
+    &__article-text {
+      font-size: em(20px);
     }
   }
 }
