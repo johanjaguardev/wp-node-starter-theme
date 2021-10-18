@@ -16,6 +16,44 @@ body {
   font-size: $font-size-general;
 }
 
+section {
+  display: flex;
+  flex-direction: row;
+
+  figure {
+    padding: em(12px);
+    width: em($space-width * 5);
+  }
+  
+  article {
+    padding: em(12px);
+    width: em($space-width * 7);
+  }
+}
+
+section.section-right {
+  flex-direction: row-reverse;
+
+  figure {
+    width: em($space-width * 7);
+  }
+  
+  article {
+    width: em($space-width * 5);
+  }
+}
+
+section.center {
+  flex-direction: column;
+  figure {
+    width: em($space-width * 12);
+  }
+  
+  article {
+    width: em($space-width * 12);
+  }
+}
+
 /* Make all link text black with no text decoration */
 a {
   color: black;
@@ -31,19 +69,23 @@ h1 {
 
 
 h2 {
-  font-size: em(25px);
+  font-size: em(56px);
   font-weight: 300;
   margin: em(10px) 0;
   line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 p {
-  font-size: em(1px);
-  margin: 1 em(10px) 0;
+  font-size: em(20px);
+  line-height: 1.5;
+  margin: 0 0 em(20px) 0;
 }
 
 /* All images must not be larger than parent container */
 img {
+  height: auto;
   max-width: 100%;
 }
 

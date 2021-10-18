@@ -7,7 +7,7 @@
 </head>
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
-  <header id="header" role="banner" class="flex header" style="background-image: url('http:<?php echo the_post_thumbnail_url(); ?>')">
+  <header id="header" role="banner" class="flex header" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')">
     <div class="header__top">
       <div class="container">
         <div id="logo" class="header__logo">
@@ -21,7 +21,7 @@
     <div class="header__hero">
       <div class="container">
       <?php the_content(); ?>
-       <a href="<?php echo get_site_url()."#".get_post_meta(get_the_ID(), 'btn-link', TRUE);?>" class="btn"><?php echo get_post_meta(get_the_ID(), 'btn-label', TRUE);?></a>
+       <a href="<?php echo get_site_url()."#".get_post_meta(get_the_ID(), 'btn-anchor', TRUE);?>" class="btn"><?php echo get_post_meta(get_the_ID(), 'btn-label', TRUE);?></a>
       </div>
     </div> 
   </header>

@@ -5,7 +5,7 @@ const
   // source and build folders
   dir = {
     src         : './',
-    build       : './dist/astronauta/'
+    build       : './dist/astronauta-dist/'
   },
   // JavaScript settings
   js = {

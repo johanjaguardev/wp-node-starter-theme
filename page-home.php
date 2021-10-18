@@ -1,19 +1,24 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The template for displaying all pages
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package astronauta
+ */
+get_header(); ?>
 <main id="content" class="flex" role="main">
-  <div class="container column">
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <header class="main-header">
-    <h1 class="entry-title" itemprop="name"><?php the_title(); ?></h1> <?php edit_post_link(); ?>
-    </header>
-    <div class="entry-content" itemprop="mainContentOfPage"> 
-    <?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'full', array( 'itemprop' => 'image' ) ); } ?>
-    <?php the_content(); ?>
-    <div class="entry-links"><?php wp_link_pages(); ?></div>
-    </div>
-    </article>
-    <?php if ( comments_open() && !post_password_required() ) { comments_template( '', true ); } ?>
-    <?php endwhile; endif; ?>
-  </div>
+ 
+  <?php get_template_part('specific-page', null, array(
+    'slug' => 'nosotros', 
+    'image-bg' => false,
+    'image-position' => 'left'
+    ));?>
+
 </main>
 <?php get_footer(); ?>
