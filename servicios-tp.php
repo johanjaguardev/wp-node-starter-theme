@@ -5,32 +5,46 @@
   $content = apply_filters('the_content', $content);
   $content = str_replace(']]>', ']]&gt;', $content);
   $image = get_the_post_thumbnail_url($post);
-  $title = get_the_title($post);?>
+  $title = get_the_title($post);
+  wp_reset_postdata();
+  $articles = '';
+  $query = array(
+    'numberposts' => 3,
+    'meta_key' => 'order',
+    'orderby' => 'meta_value',
+    'order' => 'ASC',
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'category_name' => 'servicios'
+  );
 
-<section class="servicios" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')">
+  $entries = wp_get_recent_posts( $query);
+  $conteo = 0;
+  foreach ($entries as $entry) {
+    $articles.= "<article class='servicios__article servicios__article-".$conteo."' data-tab=".$conteo.">";
+    $articles.= "  <div class='servicios__article-ico'>";
+    $articles.= "    <img src='".get_the_post_thumbnail_url($entry['ID'])."' class='servicios__ico'/>";
+    $articles.= "  </div>";
+    $articles.= "  <div class='servicios__info'>";
+    $articles.= "    <h4>".get_the_title($entry['ID'])."</h4>";
+    $articles.= "    <p>".get_post_field('post_content', $entry['ID'])."</p>";
+    $articles.= "  </div>";
+    $articles.= "</article>";
+    $conteo++;
+  }
+?>
+
+<section class="servicios" style="background-image: url('<?php echo $image; ?>')">
   <a name="servicios"></a>
   <h2><?php echo $title?></h2>
   <div class="container">
-    
+    <figure class="servicios__figure">
+      <?php echo $content;?>
+    </figure>
+
     <!-- If the image is not a bg, use it inside a figure -->
     <div class="servicios__articles">
-      <article class="servicios__article">
-
-        <div class="section__content servicios__content">
-          <?php echo $content?>
-        </div>
-
-        <!-- If the btn-label and btn-anchor are filled, please show the button -->
-        <?php if( get_post_meta($page->ID, 'btn-label', TRUE) && get_post_meta($page->ID, 'btn-anchor', TRUE) ):
-          $btnLabel = get_post_meta($page->ID, 'btn-label', TRUE);
-          $btnLink = get_post_meta($page->ID, 'btn-anchor', TRUE);?>
-        <a href="<?php echo get_site_url()."#".$btnLink;?>" class="btn"><?php echo $btnLabel;?></a>
-        <?php endif;?>
-      </article>
+      <?php echo $articles?>
     </div>
-
-    <figure class="servicios__figure">
-      <img src="<?php echo $image?>"/>
-    </figure>
   </div>
 </section>
