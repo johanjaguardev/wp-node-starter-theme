@@ -12,13 +12,24 @@
  * @package astronauta
  */
 get_header(); ?>
-<main id="content" class="flex" role="main">
- 
-  <?php get_template_part('specific-page', null, array(
-    'slug' => 'nosotros', 
-    'image-bg' => false,
-    'image-position' => 'left'
-    ));?>
+<main id="content" class="flex column" role="main">
+<?php
+get_template_part('specific-page', null, array(
+  'slug' => 'nosotros', 
+  'image-bg' => false,
+  'image-position' => 'left'
+));
+get_template_part('specific-page', null, array(
+  'slug' => 'expertos', 
+  'image-bg' => true,
+  'image-position' => 'center'
+));
+get_template_part('specific-page', null, array(
+  'slug' => 'productos', 
+  'image-bg' => false,
+  'image-position' => 'right'
+));
+?>
 
 </main>
 <?php get_footer(); ?>

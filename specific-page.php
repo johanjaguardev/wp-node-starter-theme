@@ -21,6 +21,7 @@
     <figure class="<?php echo $slug?>__figure">
       <img src="<?php echo $image?>"/>
     </figure>
+    <?php endif;?>
     <article class="<?php echo $slug?>__article">
       <h2><?php echo $title?></h2>
       <div class="section__content <?php echo $slug?>__content">
@@ -34,6 +35,5 @@
       <a href="<?php echo get_site_url()."#".$btnLink;?>" class="btn"><?php echo $btnLabel;?></a>
       <?php endif;?>
     </article>
-    <?php endif;?>
   </section>
 <?php endif;?>

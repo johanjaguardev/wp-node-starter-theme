@@ -146,12 +146,19 @@ li {
   color: $text-black;
   font-size: em(32px);
   font-weight: 700;
+  text-align: center;
   padding: em(6px) em(20px);
-
+  text-transform: uppercase;
+  
   @media screen and (max-width: $screen-size-tablet) {
     font-size: em(24px);
     padding: em(4px) em(10px);
   }
+}
+
+main {
+  align-items: center;
+  flex-direction: column;
 }
 
 // font-family: 
