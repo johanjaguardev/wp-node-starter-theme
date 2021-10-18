@@ -16,6 +16,28 @@
   &__figure {
     padding-right: em(60px);
   }
+  
+  &__info {
+    padding-left: em(30px);
+
+    h4 {
+      color: $text-white;
+      font-size: em(24px);
+      font-weight: 800;
+      margin-bottom: em(12px);
+    }
+  }
+
+  &__article-text {
+    color: $text-white;
+    font-size: em(20px);
+    line-height: 1.2;
+
+    p {
+      font-weight: 200;
+    }
+  }
+
   &__article {
     background-color: $text-black;
     border-radius: em(32px);
@@ -23,36 +45,7 @@
     flex-direction: row;
     margin-bottom: em(30px);
     padding: em(26px);
-    &-ico {
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      padding: 0;
-      width: rem($space-width * 4);
-
-      img {
-        height: em($space-width * 1);
-      }
-    }
-    .servicios__info {
-      padding-left: em(30px);
-
-      h4 {
-        color: $text-white;
-        font-size: em(24px);
-        font-weight: 800;
-        margin-bottom: em(12px);
-      }
-      .servicios__article-text {
-        color: $text-white;
-        font-size: em(20px);
-        line-height: 1.2;
-
-        p {
-          font-weight: 200;
-        }
-      }
-    }
+  
     &:nth-child(even) {
       background-color: $text-white;
       .servicios__info {
@@ -62,6 +55,49 @@
         .servicios__article-text {
           color: $text-black;
         }
+      }
+    }
+  }
+
+  &__article-ico {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    width: rem($space-width * 4);
+
+    img {
+      height: em($space-width * 1);
+    }
+  }
+
+  @media screen and (max-width: $screen-size-desktop-xl) {
+    &__figure {
+      padding-right: em(20px);
+    }
+    &__article {
+      padding: em(16px);
+    }
+    &__info {
+      padding-left: em(16px);
+
+      h4 {
+        font-size: em(18px);
+        margin-bottom: em(8px);
+      }
+    }
+    &__article-text {
+      color: $text-white;
+      font-size: em(16px);
+      line-height: 1.2;
+    }
+
+
+    &__article-ico {
+      width: rem($space-width * 4);
+
+      img {
+        height: em($space-width * 0.9);
       }
     }
   }
