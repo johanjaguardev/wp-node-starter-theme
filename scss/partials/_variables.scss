@@ -11,7 +11,8 @@ $space-width: 128px;
 
 $font-size-general: 16px;
 @function em($pixels) {
-  @return ($pixels / $font-size-general) * 1em;
+  // @return ($pixels / $font-size-general) * 1em;
+  @return (math.div($pixels, $font-size-general)) *1em;
 }
 
 $text-white: #fff;

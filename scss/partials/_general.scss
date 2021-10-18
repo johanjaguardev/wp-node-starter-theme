@@ -16,7 +16,34 @@ body {
   font-size: $font-size-general;
 }
 
-section {
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  max-width: $screen-size-desktop-l;
+  overflow: visible;
+
+  @media screen and (max-width: $screen-size-desktop-xl) {
+    max-width: $screen-size-desktop-s;
+  }
+
+  @media screen and (max-width: $screen-size-desktop-l) {
+    max-width: $screen-size-tablet;
+  } 
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.column {
+  flex-direction: column;
+}
+
+section.container {
   display: flex;
   flex-direction: row;
 
@@ -33,6 +60,16 @@ section {
     padding: em(12px);
     width: em($space-width * 7);
   }
+
+  @media screen and (max-width: $screen-size-tablet) {
+    flex-direction: column;
+    figure {
+      width: 100%;
+    }
+    article {
+      width: 100%;
+    }
+  }
 }
 
 section.section-right {
@@ -45,16 +82,20 @@ section.section-right {
   article {
     width: em($space-width * 5);
   }
+
+  @media screen and (max-width: $screen-size-tablet) {
+    flex-direction: column-reverse;
+  }
 }
 
 section.center {
   flex-direction: column;
   figure {
-    width: em($space-width * 12);
+    width: 100%;
   }
   
   article {
-    width: em($space-width * 12);
+    width: 100%;
   }
 }
 
@@ -97,32 +138,6 @@ img {
 /* No styling on list items */
 li {
   list-style-type: none;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-  max-width: $screen-size-desktop-l;
-  overflow: visible;
-
-  @media screen and (max-width: $screen-size-desktop-xl) {
-    max-width: $screen-size-desktop-s;
-  }
-
-  @media screen and (max-width: $screen-size-desktop-l) {
-    max-width: $screen-size-tablet;
-  } 
-}
-
-.flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.column {
-  flex-direction: column;
 }
 
 .btn {

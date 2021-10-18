@@ -3,5 +3,11 @@
   border-radius: em(32px);
   color: $text-white;
   margin: em(128px) 0;
-  padding: em($space-width * 0.7) em($space-width * 0.7) em($space-width * 0.7) 0 
+  padding: em($space-width * 0.7) em($space-width * 0.7) em($space-width * 0.7) 0;
+  
+  @media screen and (max-width: $screen-size-tablet) {
+    border-radius: 0;
+    margin: 0;
+    padding: em(20px);
+  }
 }
