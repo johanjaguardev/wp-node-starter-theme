@@ -44,7 +44,15 @@
       margin-top: em(30px);
     }
   } 
+  @media screen and (max-width: $screen-size-desktop-l) {
+    &__logo {
+      width: em($space-width * 6);
+    }
 
+    &__nav {
+      width: em($space-width * 6);
+    }
+  }
   @media screen and (max-width: $screen-size-tablet) {
     &__logo {
       width: em($space-width * 10);
