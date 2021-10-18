@@ -51,7 +51,8 @@ CHANGELOG
 - structure files - Source: https://www.sitepoint.com/fast-gulp-wordpress-theme-development-workflow/
 - watch sass from node - Source: https://medium.com/@ahewitt_89859/using-node-sass-to-watch-sass-files-cef9b5149aca
 - change of plans, implement gulp: https://www.sitepoint.com/fast-gulp-wordpress-theme-development-workflow/
-- initial css styles (*current)
+- initial css styles
+- header hero and nav styles (*current)
 
 
 FUTURE TASK

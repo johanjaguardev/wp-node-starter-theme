@@ -7,26 +7,28 @@
   justify-content: center;
 
   &__top {
-    
     .container {
       justify-content: space-between; 
     }
   }
 
   &__logo {
-    width: $space-width * 2;
+    width: em($space-width * 2);
   }
 
   &__nav {
-    width: $space-width * 8;
+    width: em($space-width * 8);
   }
 
   &__hero {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding: 5em 0;
+
+    .container {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
     p {
       color: $text-white;
@@ -42,4 +44,22 @@
       margin-top: em(30px);
     }
   } 
+
+  @media screen and (max-width: $screen-size-tablet) {
+    &__logo {
+      width: em($space-width * 10);
+    }
+
+    &__nav {
+      width: em($space-width * 2);
+    }
+
+    &__hero {
+      padding: 2em 0;
+
+      p {
+        font-size: em(36px);
+      }
+    }
+  }
 }

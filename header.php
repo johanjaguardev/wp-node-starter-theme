@@ -19,8 +19,9 @@
       </div>
     </div>
     <div class="header__hero">
-       <?php the_content(); ?>
+      <div class="container">
+      <?php the_content(); ?>
        <a href="<?php echo get_site_url()."#".get_post_meta(get_the_ID(), 'btn-link', TRUE);?>" class="btn"><?php echo get_post_meta(get_the_ID(), 'btn-label', TRUE);?></a>
+      </div>
     </div> 
-
   </header>
