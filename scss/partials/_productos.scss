@@ -1,0 +1,22 @@
+.productos {
+  padding: em($space-width * 1) 0;
+
+  h2 {
+    color: $text-purple;
+    margin-bottom: em(8px);
+  }
+  
+  h3 {
+    font-weight: 800;
+    margin: em(24px) 0 em(12px) 0;
+  }
+
+  @media screen and (max-width: $screen-size-tablet) {
+    padding: 0;
+
+    h2 {
+      color: $text-purple;
+      margin: em(16px) 0;
+    }
+  } 
+}
