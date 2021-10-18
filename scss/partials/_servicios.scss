@@ -1,0 +1,16 @@
+.servicios {
+  background-color: $text-purple;
+  padding: em($space-width * 1) 0 em($space-width * 2) 0;
+  margin-bottom: em($space-width * -1.1);
+  width: 100%;
+
+  &__figure, &__articles {
+    width: 50%;
+  }
+
+  h2 {
+    color: $text-white;
+    margin-bottom: em(20px);
+    text-align: center;
+  }
+}

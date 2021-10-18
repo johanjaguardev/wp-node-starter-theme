@@ -19,6 +19,7 @@ get_template_part('specific-page', null, array(
   'image-bg' => false,
   'image-position' => 'left'
 ));
+get_template_part('servicios-tp', null);
 get_template_part('specific-page', null, array(
   'slug' => 'expertos', 
   'image-bg' => true,
